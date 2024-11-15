@@ -70,7 +70,6 @@ public class DLL {
                     }
                     else{
                         head=head.next;
-                        head.prev=null;
                         
 
                     }
@@ -81,6 +80,7 @@ public class DLL {
                         tail.next=null;
                     }
                 }
+            
                 temp=temp.next;
             }
         }
