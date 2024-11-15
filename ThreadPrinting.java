@@ -11,7 +11,7 @@ class ThreadPrinting{
             this.str=str;
         }
         public void run(){ 
-            if(str.compareTo("Hello World")<0){
+            if(str.compareTo("Hello World")!=0){
                 for(int i=0;i<100;i++) {
                     System.out.println(str);
                     try{

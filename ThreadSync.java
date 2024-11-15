@@ -1,44 +1,44 @@
 class Printer{
-        synchronized void printing(char a){
-            for(int i=0;i<10;i++){
-                for(int j=0;j<i;j++){
-                    System.out.print(a);
-                }
-                System.out.println();
+    synchronized void print(char ch){
+        for(int i=0;i<10;i++)
+            {
+            for(int j=0;j<i;j++){
+                System.out.print(ch);
             }
+            System.out.println();
+            }
+
     }
 }
 
-
 class Star extends Thread{
-    Printer p;
+    Printer print;
     Star(Printer p){
-        this.p=p;
+        print=p;
     }
-    
     public void run(){
-        p.printing('*');
+        print.print('*');
     }
 }
 
 class Hash extends Thread{
-    Printer p;
+    Printer print;
     Hash(Printer p){
-        this.p=p;
+        print=p;
     }
-    
     public void run(){
-        p.printing('#');
+        print.print('#');
     }
 }
+
 
 public class ThreadSync {
 
     public static void main(String[] args) {
-        Printer p = new Printer();
+        Printer pr=new Printer();
 
-        Hash h = new Hash(p);
-        Star s = new Star(p);
+        Hash h= new Hash(pr);
+        Star s = new Star(pr);
 
         s.start();
         h.start();

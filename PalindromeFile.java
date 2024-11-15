@@ -1,52 +1,51 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class PalindromeFile {
-    public static void main(String[] args) throws IOException {
-        Scanner sc =new Scanner(System.in);
-        String input = sc.nextLine();
-
-        StringTokenizer st = new StringTokenizer(input);
-        FileWriter fw = new FileWriter("palindrome.txt");
+    public static void main(String[] args) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter A String of Numbers: ");
+        String str = sc.nextLine();
+        FileWriter fw = new FileWriter("output.txt");
+        StringTokenizer st =new StringTokenizer(str);
+        int rem;
+        
         while(st.hasMoreTokens()){
+            
             int token = Integer.parseInt(st.nextToken());
-            int rev=0,rem;
-            int num=token;
+            int temp=token;
+            int rev=0;
             while(token!=0){
+                
                 rem=token%10;
-                rev=rev*10+rem;
+                rev=(rev*10)+rem;
                 token=token/10;
             }
-            if(rev==num){
-                fw.write(num+"\n");
-            }
-
+                if(rev==temp){
+                    fw.write(temp+"\n");
+                }
             
         }
-
         fw.close();
 
 
-        BufferedReader br = new BufferedReader(new FileReader("palindrome.txt"));
 
+        BufferedReader br = new BufferedReader(new FileReader("output.txt"));
         String line;
-
         while((line=br.readLine())!=null){
             int num = Integer.parseInt(line);
-            int sum=0;
             int temp=num;
+            int sum=0;
 
             while(num!=0){
                 sum=sum+(num%10);
                 num=num/10;
             }
-                System.out.println("Sum of " +temp + " is "+sum);
-            }
-
+                System.out.println("Sum of "+temp+" is "+sum);
+            
         }
-    
+    }
 }

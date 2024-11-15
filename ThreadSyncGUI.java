@@ -29,9 +29,6 @@ class Place extends Thread{
 
 public class ThreadSyncGUI {
     public static void main(String[] args) {
-
-        
-
         JFrame f = new JFrame();
         f.setLayout(new FlowLayout());
         JTextField tf = new JTextField(16);
