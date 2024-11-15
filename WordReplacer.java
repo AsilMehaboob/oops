@@ -5,7 +5,7 @@ public class WordReplacer {
         String replacementWord = "snow";
         
         // Replace all occurrences of 'wordToReplace' with 'replacementWord'
-        String result = input.replaceAll("\\b" + wordToReplace + "\\b", replacementWord);
+        String result = input.replace(wordToReplace, replacementWord);
         
         System.out.println("Original String: " + input);
         System.out.println("Modified String: " + result);

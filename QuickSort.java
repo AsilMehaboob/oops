@@ -1,9 +1,10 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class QuickSort {
 
-    static int partition(String str[] ,int first,int last){
-        String pivot=str[last];
+    static int partition(String str[],int first,int last){
+        String pivot = str[last];
         int i=first-1;
 
         for(int j=first;j<last;j++){
@@ -14,6 +15,7 @@ public class QuickSort {
                 str[j]=temp;
             }
         }
+
         String temp=str[i+1];
         str[i+1]=str[last];
         str[last]=temp;
@@ -21,12 +23,11 @@ public class QuickSort {
         return i+1;
     }
 
-
     static void sort(String str[],int first,int last){
         if(first<last){
-            int index=partition(str, first, last);
-            sort(str, first, index-1);
-            sort(str, index+1, last);
+        int index=partition(str, first, last);
+        sort(str, first, index-1);
+        sort(str, index+1, last);
         }
     }
 
@@ -41,6 +42,7 @@ public class QuickSort {
             str[i]=sc.nextLine();
         }
         sort(str,0,4);
+        System.out.println("Sorted Names are: ");
         for(int i=0;i<5;i++){
             System.out.println(str[i]);
         }
