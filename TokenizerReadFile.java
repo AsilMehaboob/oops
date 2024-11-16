@@ -14,9 +14,7 @@ public class TokenizerReadFile {
         f.setLayout(new FlowLayout());   
         JTextField tf = new JTextField(16);
         JButton btn = new JButton("Read");
-
         
-
         btn.addActionListener(e->{
             String str = tf.getText();
             writetofile(str);

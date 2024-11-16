@@ -75,7 +75,7 @@ public class Stack {
                     break;
                 default:
                     
-                    System.exit(0);
+                    return;
             }
         }
      }

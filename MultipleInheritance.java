@@ -3,7 +3,7 @@ interface Salary{
 }
 
 class Normal implements Salary{
-
+                                
     int salary;
 
     public Normal(int salary){
@@ -50,7 +50,6 @@ class Account{
 }
 
 public class MultipleInheritance {
-
     public static void main(String[] args) {
         Normal n = new Normal(10000);
         Bonus b = new Bonus(10000,2000);
