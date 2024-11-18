@@ -47,5 +47,6 @@ public class PalindromeFile {
                 System.out.println("Sum of "+temp+" is "+sum);
             
         }
+        br.close();
     }
 }

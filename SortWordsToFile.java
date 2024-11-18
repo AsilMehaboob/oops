@@ -36,7 +36,7 @@ public class SortWordsToFile {
         } catch (IOException e) {
             System.out.println("Error writing to file: " + e.getMessage());
         }
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
         // Print the number of words in the terminal
         System.out.println("Number of words in " + outputFileName + " file = " + words.size());
     }
